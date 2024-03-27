@@ -1,0 +1,28 @@
+.countImage{
+    width: 45px;
+}
+.chartContainer{
+    /* background-color: var(--white); */
+    box-shadow: 0 0 10px var(--lightAsh);
+    border-radius: 8px;
+    /* height: 260px; */
+}
+.withWidget{
+    position: relative;
+}
+.widgetPopUp{
+    position: absolute;
+    top: 35px;
+    left: -80px;
+    width: 260px;
+    background-color: var(--white);
+    border-radius: 10px;
+    z-index: 100;
+    padding: .5rem;
+    font-size: .65rem;
+    box-shadow: 0 0 10px var(--ash);
+}
+.clear{
+    color: var(--perple);
+    cursor: pointer;
+}

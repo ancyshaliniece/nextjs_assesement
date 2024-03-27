@@ -1,0 +1,36 @@
+.selectedTxt{
+    border: 1px solid var(--footerBg);
+    /* background-color: var(--footerBg); */
+    border-radius: 5px;
+    font-size: .83rem;
+    padding: .3rem .5rem .1rem;
+    cursor: pointer;
+}
+.upArrow{
+    transform: rotate(180deg);
+    width: 16px;
+}
+.downArrow{
+    width: 16px;
+}
+.options{
+    /* background-color: var(--white); */
+    padding: .5rem 0rem;
+    position: absolute;
+    box-shadow: 0 0 10px var(--lable);
+    border-radius: 5px;
+    margin-top: .5rem;
+    width: 100%;
+    font-size: .75rem;
+    /* height: 130px; */
+    overflow-y: auto;
+}
+.optionTxt{
+    padding: .3rem .8rem;
+    cursor: pointer;
+
+}
+.optionTxt:hover{
+    background-color: var(--hover);
+    color: var(--perple);
+}

@@ -1,0 +1,58 @@
+.sideMenu {
+  height: calc(100vh - 85px);
+  /* background-color: var(--white); */
+  padding-top: 1.5rem;
+  box-shadow: 0 0 10px var(--lightAsh);
+  position: fixed;
+  z-index: 1000;
+}
+
+.expandMenu {
+  width: 200px;
+}
+
+.shortMenu {
+  width: 75px;
+}
+
+.dashboard {
+  background-color: green;
+}
+
+.menuTxt {
+  font-size: 0.9rem;
+  color: var(--perple);
+}
+
+.textWidth {
+  width: 160px;
+}
+
+.images {
+  /* width: 37px; */
+  /* margin-left: 3rem; */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0rem;
+ 
+}
+
+.image {
+  padding: 0.3rem 1rem 0.3rem 0rem;
+  width: 35px;
+}
+
+.expandImage {
+  padding: 0.3rem 0.3rem 0.3rem 0rem;
+  margin-right: 0.5rem;
+}
+
+.indication::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 75%;
+  background-color: var(--perple);
+  border-radius: 0px 27px 27px 0px;
+}

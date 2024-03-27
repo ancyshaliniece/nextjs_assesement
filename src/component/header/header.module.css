@@ -1,0 +1,103 @@
+.searchInput{
+    width: 100%;
+    border-radius: 10px;
+    padding: .2rem 2rem;
+    font-size: .9rem
+}
+.searchInput::placeholder{
+    font-size: .9rem;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    top: 0;
+    z-index: 10000;
+}
+.search{
+    width: 350px;
+}
+.headBg{
+    padding: .5rem;
+    background-color: var(--backgroundColor);
+    border-radius: 50%;
+    width: 30px;
+}
+.userName{
+    font-size: .95rem;
+}
+.post{
+    font-size: .7rem;
+}
+.user{
+    background-color: var(--backgroundColor);
+    /* padding: .2rem; */
+    border-radius: 20px;
+    width: 140px;
+}
+.textFieldImage{
+    margin-top: .2rem;
+}
+.notification{
+    position: relative;
+}
+.notification::before{
+    content: '4';
+    position: absolute;
+    top: 0; /* Move the pseudo-element 50% down relative to its container */
+    right: 0; /* Move the pseudo-element 50% to the right relative to its container */
+    transform: translate(-15%, -50%); /* Center the pseudo-element horizontally and vertically */
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--perple);
+    color: var(--white);
+    font-size: .5rem;
+    text-align: center;
+}
+.logo{
+    width: 50px;
+}
+.profileDropDown{
+    position: absolute;
+    background-color: var(--white);
+    width: 150px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: .5rem 0rem;
+}
+.profileDropDownSpan{
+    padding-left: 1.5rem;
+    background-image: url('../../../public/Assets/Dashboard/profile\ black.png');
+    background-repeat: no-repeat;
+    background-position: calc(22% - 10px) 5px;
+}
+.pro:hover .profileDropDownSpan{
+    color: var(--perple);
+    background-image: url('../../../public/Assets/Dashboard/profile\ selection.png');
+    background-repeat: no-repeat;
+    
+    
+}
+.pro:hover,.logOut:hover{
+    background-color: #faf1ff;
+}
+.profileDropDownSpanLogout{
+    padding-left: 1.5rem;
+    background-image: url('../../../public/Assets/Dashboard/logout\ black.png');
+    background-repeat: no-repeat;
+    background-position: calc(22% - 10px) 5px;
+
+}
+ .logOut:hover .profileDropDownSpanLogout{
+    /* padding: 1.5rem; */
+    color: var(--perple);
+    background-image: url('../../../public/Assets/Dashboard/logout\ selection.png');
+    background-repeat: no-repeat;
+} 
+.pro,.logOut{
+   /* padding-left: 1.5rem; */
+   padding: .3rem .5rem;
+   font-size: .8rem;
+}

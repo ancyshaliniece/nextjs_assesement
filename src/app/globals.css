@@ -2,26 +2,546 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "swiper/swiper-bundle.css";
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Old+Sogdian&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --black: #000;
+  --white: #ffffff;
+  --lightAsh: #f0f0f0;
+  --ash: #9f9f9f;
+  --perple: #c030f0;
+  --darkBlue: #2732ff;
+  --yellow: #faa21f;
+  --vilote: #f71ffa;
+  --skyBlue: #1fe0fa;
+  --blue: #1b8efa;
+  --darkAsh: #969696;
+  --lightBlack: #676767;
+  --red: #d52b1e;
+  --calBlue: #019ff8;
+  --pink: #f2426d;
+  --distemberGreen: #58baab;
+  --green: #25a832;
+  --lightGreen: #e8ffeb;
+  --backgroundColor: #f9f9f9;
+  --footerBg: #e8e8e8;
+  --footerTxt: #4e4e4e;
+  --lable: #8d8c8c;
+  --hover: #fdf6ff;
+  --student: #eeeefa;
+  --course: #f9edf0;
+  --faculty: #faf2e6;
+  --category: #e9f2f8;
+  --minAsh:#CDCDCD;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+
+.lableColor {
+  color: var(--lable);
+}
+.shadow{
+  box-shadow: 0 0 10px var(--ash);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+.lightAsh{
+  color: var(--lightAsh);
+}
+input::placeholder{
+  font-weight: 400;
+}
+input,
+select {
+  border-bottom: 1px solid var(--minAsh);
+  outline: none;
+  width: 170px;
+  font-size: .9rem;
+  background-color: transparent;
+}
+
+.input,textarea {
+  border: 2px solid var(--lightAsh) !important;
+  outline: none;
+  background-color: transparent;
+}
+
+.searchInput {
+  border-radius: 1px solid var(--footerTxt) !important;
+  border-radius: 5px !important;
+}
+
+.header {
+  /* background-color: var(--white); */
+  box-shadow: 0 0 10px var(--lightAsh);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--backgroundColor);
+}
+
+img {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.layout {
+  margin-top: 55px;
+  display: flex;
+}
+
+.purple {
+  color: var(--perple);
+}
+
+.mainContainer {
+  padding: 2rem;
+}
+
+.child {
+  width: 100%;
+  margin-left: 4.5rem;
+}
+
+.student {
+  background-color: var(--student);
+}
+
+.courses {
+  background-color: var(--course);
+}
+
+.categories {
+  background-color: var(--category);
+}
+
+.faculty {
+  background-color: var(--faculty);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--footerBg);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--footerBg);
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-scrollbar {
+  display: none !important;
+}
+
+.swiper-slide {
+  margin-right: 17px !important;
+}
+
+.highcharts-container {
+  height: 180px !important;
+  width: 100% !important;
+}
+
+.columnChart .highcharts-container {
+  height: 220px !important;
+}
+
+.highcharts-credits {
+  display: none !important;
+}
+
+.w_feild:hover {
+  color: var(--perple);
+  cursor: pointer;
+}
+
+.lableContainer {
+  display: block;
+  position: relative;
+  padding-left: 22px;
+  cursor: pointer;
+  font-size: .7rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.lableContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid var(--ash);
+  /* background-color: #eee; */
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.lableContainer:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.lableContainer input:checked~.checkmark {
+  background-color: var(--perple);
+  border: 1px solid var(--perple);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.lableContainer input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.lableContainer .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.elipse{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+tr{
+  border-bottom: 1px solid var(--student);
+}
+tr:hover{
+  background-color: var(--hover);
+  cursor: pointer;
+}
+.eventTable tr:hover{
+  background-color: transparent !important;
+}
+th{
+  background-color: var(--backgroundColor);
+}
+.boxSharow{
+  box-shadow: 0 0 10px var(--lightBlack);
+}
+.boxSharow:hover{
+  background-color: none;
+}
+.containerInfo{
+  /* background-color: var(--white); */
+  padding: 1rem;
+  width: 100%;
+  height: 80vh;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+.popup{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 20000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popupInfo{
+background-color: var(--white);
+padding: 2rem;
+border-radius: 20px;
+}
+.tableContainer{
+  /* background-color: var(--white); */
+  box-shadow: 0 0 10px var(--lightAsh);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.gradeInfo:hover .gradeDiv{
+  visibility: visible;
+}
+.gradeDiv{
+  visibility: hidden;
+}
+
+
+/* toggle atyle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 31px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 4px;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  background-color: #f2d2fb;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 12.5px;
+  width: 12.5px;
+  right: 2px;
+  bottom: 2.5px;
+  background-color: var(--perple);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .toggleSlider {
+  background-color: #f2d2fb;
+}
+
+input:focus + .toggleSlider {
+  box-shadow: 0 0 1px #f2d2fb;
+}
+
+input:checked + .toggleSlider:before {
+  -webkit-transform: translateX(-16px);
+  -ms-transform: translateX(-16px);
+  transform: translateX(-16px);
+}
+
+.toggleSlider.round {
+  border-radius: 8px;
+}
+
+.toggleSlider.round:before {
+  border-radius: 50%;
+}
+.coursesCard{
+  box-shadow: 0 0 15px var(--footerBg);
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+
+.coursesCard:hover{
+  border: 1px solid var(--perple);
+}
+
+.detailsActive{
+  background-color: #e3ffe6;
+  color: var(--green);
+  font-weight: 500;
+  padding: 0rem .5rem;
+  border-radius: 5px;
+}
+.react-tabs__tab--selected {
+    background: var(--perple) !important;
+    border-color: var(--perple) !important;
+    color: var(--white) !important;
+}
+.react-tabs__tab{
+  border-radius: 5px 5px 0px 0 !important;
+  border: 1px solid var(--footerBg) !important;
+ margin-right: .5rem;
+}
+.react-tabs__tab--selected .number{
+  background-color: var(--white);
+  color: var(--perple);
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid var(--footerBg) !important;
+}
+.react-tabs__tab--selected .tabSelect{
+  color: var(--white) !important;
+  font-weight: 500 !important;
+}
+.error-message{
+  font-size: .7rem;
+  color: var(--red);
+  height: 10px;
+}
+.formFields input::placeholder{
+  font-size: .75rem;
+}
+.selectCommon{
+  color: #ccc !important;
+}
+.current-week-event{
+  background-color:#d1094c !important;
+  border: 1px solid #d1094c;
+}
+
+.finished-event{
+  background-color: #019FF8 !important;
+  border: 1px solid #019FF8;
+}
+.upcoming-event{
+  background-color: var(--distemberGreen) !important;
+  border: 1px solid var(--distemberGreen) !important;
+}
+.fc-toolbar-title{
+  font-size: 1.4rem !important;
+}
+.fc .fc-button .fc-icon {
+  font-size: 1em !important;
+}
+.fc-button {
+  padding: 0.1em 0.2em !important;
+}
+.fc-today-button{
+  font-size: .75rem !important;
+  padding: .3rem .7rem !important;
+  text-transform: capitalize !important;
+  letter-spacing: 1px !important;
+}
+.fc .fc-button-primary:disabled {
+  background-color: var(--perple) !important;
+  border-color: var(--perple) !important;
+  color: var(--white) !important;
+}
+.fc .fc-button:disabled {
+  opacity: 1 !important;
+}
+
+.fc .fc-button-primary {
+  background-color: #ebe9e9;
+  border-color: var(--hover) ;
+  color: var(--lightBlack);
+  box-shadow: 0 0 10px var(--backgroundColor);
+}
+.fc-toolbar-title{
+  margin-left: -7rem !important;
+}
+.fc-view-harness{
+  font-size: .8rem !important;
+}
+.fc-col-header-cell{
+  font-weight: 600 !important;
+  padding: .4rem 1rem !important;
+  background-color: #ebe9e9 !important;
+}
+/* .eventCalendar #calendar {
+  height: 500px; 
+}
+.fc-scrollgrid-sync-table{
+  height: 410px !important;
+}
+.fc-view-harness{
+  height: 445px !important;
+} */
+.fc .fc-day-other .fc-daygrid-day-top {
+  opacity: 0 !important;
+}
+.fc .fc-daygrid-day-number {
+  opacity: .5 !important;
+}
+.fc-daygrid-event-dot{
+  border: calc(var(--fc-daygrid-event-dot-width) / 2) solid var(--white) !important;
+}
+.fc .fc-daygrid-event{
+  color: var(--white) !important;
+  font-size: .65rem !important;
+  font-weight: 500 !important;
+}
+.fc-daygrid-dot-event .fc-event-title{
+  font-weight: 500 !important;
+  margin-left: .5rem !important;
+  margin-top: .1rem;
+}
+.fc-daygrid-dot-event .fc-event-title::before{
+  content: " | ";
+  position: absolute;
+  margin-left: -.4rem;
+  margin-top: -.1rem;
+}
+.fc .fc-timegrid-slot {
+  height: 2em !important;
+}
+/* .fc .fc-daygrid-day.fc-day-today{
+  position: relative;
+}
+.fc .fc-daygrid-day.fc-day-today::before{
+  content: ' + ';
+    position: absolute;
+    background-color: var(--perple);
+    color: var(--white);
+    left: 5%;
+    bottom: 6%;
+    padding: 0px 3px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+   
+   
+} */
+
+/* .Josefin{
+  font-family: "Noto Sans Old Sogdian", sans-serif;
+  font-size: .9rem !important;
+  font-weight: 500;
+} */
+.magicBox{
+ visibility: hidden;
+}
+.eventCard:hover .magicBox{
+  visibility: visible;
+}
+.eventCard{
+  cursor: pointer;
+}
+.testtt .fc-col-header-cell{
+  background-color: #000 !important;
+}
+.bFilter{
+  filter: brightness(10);
 }

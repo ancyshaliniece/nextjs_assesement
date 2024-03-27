@@ -1,0 +1,31 @@
+.btn{
+    border: 1px solid var(--perple);
+    color: var(--perple);
+    font-size: .8rem;
+    border-radius: 5px;
+    padding: .3rem .6rem;
+}
+.btn:hover{
+    background-color: var(--perple);
+    color: var(--white);
+}
+.active{
+    background-color: var(--perple);
+    color: var(--white);
+}
+
+.reBbtn{
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: .3rem 1rem;
+}
+.reBbtn:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.redActive{
+    background-color: var(--red);
+    color: var(--white);
+}

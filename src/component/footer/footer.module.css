@@ -1,0 +1,14 @@
+.footer{
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* background-color: var(--footerBg); */
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    color: var(--footerTxt);
+    box-shadow: 0 0 10px var(--footerBg);
+}

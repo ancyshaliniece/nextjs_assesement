@@ -1,0 +1,33 @@
+.indication{
+
+}
+.indicationField{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.occup,.vacc{
+    font-size: .8rem;
+}
+.occup::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2732ff;
+    /* top: .1rem;
+    left: -.2rem; */
+    margin-top: .5rem;
+    margin-left: -.9rem;
+}
+.vacc::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e8ffeb;
+    margin-top: .5rem;
+    margin-left: -.9rem;
+}

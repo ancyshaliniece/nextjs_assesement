@@ -1,0 +1,23 @@
+.thead{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.regFee{
+    width: 103px !important;
+}
+
+.tr:hover .moreIcon{
+visibility: visible;
+}
+.moreIcon{
+    visibility: hidden;
+}
+.sortText{
+    position: relative;
+}
+.sortIcon{
+    position: absolute;
+    right: -14px;
+    top: 25%;
+}

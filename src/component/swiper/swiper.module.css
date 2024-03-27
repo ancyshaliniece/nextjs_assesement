@@ -1,0 +1,10 @@
+.slideContainer{
+    border: 1px solid var(--footerBg);
+    padding: .4rem .2rem;
+    width: 130.5px;
+    border-radius: 5px;
+}
+.slideImage{
+    width: 15px;
+}
+

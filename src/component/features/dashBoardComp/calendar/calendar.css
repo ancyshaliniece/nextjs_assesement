@@ -1,0 +1,110 @@
+.dashBoardCalendar .rbc-btn-group{
+    display: none !important;
+}
+.dashBoardCalendar .rbc-month-view{
+    /* background-color: #fff !important; */
+    z-index: 99;
+}
+.dashBoardCalendar .rbc-day-bg + .rbc-day-bg, 
+.dashBoardCalendar .rbc-header + .rbc-header {
+    border-left: none;
+}
+.dashBoardCalendar .rbc-month-view{
+    border: none;
+}
+.dashBoardCalendar .rbc-header{
+    border-bottom: none;
+}
+.dashBoardCalendar .rbc-month-row + .rbc-month-row{
+    border-top: none;
+}
+.rbc-month-view .rbc-month-row,
+.rbc-month-view .rbc-header,
+.rbc-month-view .rbc-day-bg + .rbc-row .rbc-day-bg {
+  height: 20px !important; 
+}
+.dashBoardCalendar .rbc-button-link{
+    font-size: .65rem;
+}
+.dashBoardCalendar .rbc-row-segment {
+    position: absolute;
+    top: 0;
+    background-color: #f2d2fb;
+    border-radius: 50%;
+    z-index: -1;
+    color: #fff;
+    padding: 0rem 0rem .05rem 0rem;
+    color: var(--perple) !important;
+}
+.dashBoardCalendar .rbc-event{
+background-color: transparent;
+border-radius: 50%;
+padding: 0;
+}
+.dashBoardCalendar .rbc-row-segment button{
+    color: var(--perple) !important;
+}
+.dashBoardCalendar .rbc-event::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--perple);
+    border-radius: 50%;
+    right: 3px;
+}
+.dashBoardCalendar .rbc-row-segment .rbc-event-content{
+    visibility: hidden;
+} 
+.prevBtn{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0;
+    top: 1rem;
+}
+.nextBtn{
+    transform: rotate(270deg);
+    position: absolute;
+    right: 0;
+    top: 1rem;
+}
+.dashBoardCalendar .rbc-toolbar-label{
+    font-size: .85rem;
+    font-weight: 500;
+}
+.dashBoardCalendar .rbc-calendar{
+    margin-top: -.5rem;
+}
+.dashBoardCalendar .rbc-off-range {
+    color: transparent;
+    /* background-color: var(--white); */
+}
+.dashBoardCalendar .rbc-header{
+    font-weight: 600;
+    font-size: 68%;
+}
+.dashBoardCalendar .rbc-date-cell{
+    padding-right: 10px;
+}
+.rbc-day-bg.rbc-today {
+    border-radius: 50%; /* Rounded border */
+  background-color: var(--perple); /* Purple background color */
+  }
+
+  .rbc-current{
+    color: var(--white) !important;
+    padding: 0;
+  }
+  .rbc-date-cell.rbc-now {
+    font-weight: 500;
+}
+.rbc-date-cell{
+    text-align: center;
+    padding-left: 7px;
+}
+.rbc-off-range-bg {
+    background: none;
+}
+.rbc-month-row{
+    color: var(--lightBlack);
+}
