@@ -19,12 +19,12 @@ import { useSelector } from "react-redux";
 export default function DashBoards() {
     const [showWidget, setShowWidget] = useState(false);
     const [checkBox, setcheckBox] = useState({
-        selectAll: false,
-        statistics: false,
-        event: false,
-        courses: false,
-        revenue: false,
-        recent: false
+        selectAll: true,
+        statistics: true,
+        event: true,
+        courses: true,
+        revenue: true,
+        recent: true
     });
     const [darkMode, setdarkMode] = useState<string | null>(null);
     const mode = useSelector((store: any) => store.modeStore);
@@ -96,27 +96,27 @@ export default function DashBoards() {
                             </div>
                             <div className="w_feild flex items-center m-2 cursor-pointer">
                                 <label className="lableContainer cursor-pointer w-[200px]" htmlFor="statistics">Students Enrollment Statistics
-                                    <input type="checkbox" name="statistics" id="statistics" onChange={handleCheckboxChange} />
+                                    <input type="checkbox" name="statistics" id="statistics" checked={checkBox.statistics} onChange={handleCheckboxChange} />
                                     <span className="checkmark"></span></label>
                             </div>
                             <div className="w_feild flex items-center m-2 cursor-pointer">
                                 <label className="lableContainer cursor-pointer" htmlFor="event">Events
-                                    <input type="checkbox" name="event" id="event" onChange={handleCheckboxChange} />
+                                    <input type="checkbox" name="event" id="event" checked={checkBox.event} onChange={handleCheckboxChange} />
                                     <span className="checkmark"></span></label>
                             </div>
                             <div className="w_feild flex items-center m-2 cursor-pointer">
                                 <label className="lableContainer cursor-pointer" htmlFor="courses">Courses
-                                    <input type="checkbox" name="courses" id="courses" onChange={handleCheckboxChange} />
+                                    <input type="checkbox" name="courses" id="courses" checked={checkBox.courses} onChange={handleCheckboxChange} />
                                     <span className="checkmark"></span></label>
                             </div>
                             <div className="w_feild flex items-center m-2 cursor-pointer">
                                 <label className="lableContainer cursor-pointer" htmlFor="revenue">Revenue
-                                    <input type="checkbox" name="revenue" id="revenue" onChange={handleCheckboxChange} />
+                                    <input type="checkbox" name="revenue" id="revenue" checked={checkBox.revenue} onChange={handleCheckboxChange} />
                                     <span className="checkmark"></span></label>
                             </div>
                             <div className="w_feild flex items-center m-2 cursor-pointer">
                                 <label className="lableContainer cursor-pointer" htmlFor="recent">Recent Students
-                                    <input type="checkbox" name="recent" id="recent" onChange={handleCheckboxChange} />
+                                    <input type="checkbox" name="recent" id="recent" checked={checkBox.recent} onChange={handleCheckboxChange} />
                                     <span className="checkmark"></span></label>
                             </div>
                         </div>
@@ -132,24 +132,24 @@ export default function DashBoards() {
                         <Counter />
                     </div>
                     <div className="chart">
-                        {!checkBox.statistics && <div className={`w-[100%] pt-3 pl-4 pr-4 h-[270px] ${style.chartContainer} ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"}`}>
+                        {checkBox.statistics && <div className={`w-[100%] pt-3 pl-4 pr-4 h-[270px] ${style.chartContainer} ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"}`}>
                             <EntrollStatistic />
                         </div>}
                         <div className="coursesAndRevenue flex justify-between items-center mt-4">
-                            {!checkBox.courses && <div className={`courseChartDash w-[30%] h-[300px] p-5 ${style.chartContainer} ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"}`}>
+                            {checkBox.courses && <div className={`courseChartDash w-[30%] h-[300px] p-5 ${style.chartContainer} ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"}`}>
                                 <Courses />
                             </div>}
-                            {!checkBox.revenue && <div className={`revenueChartDash w-[68%] h-[302px] p-5 ${style.chartContainer} ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"}`}>
+                            {checkBox.revenue && <div className={`revenueChartDash w-[68%] h-[302px] p-5 ${style.chartContainer} ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"}`}>
                                 <Revenue />
                             </div>}
                         </div>
                     </div>
                 </div>
                 <div className="events w-[21%]">
-                    {!checkBox.event && <div className={`${style.chartContainer} chartEventCal  ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"} h-[45vh] mb-4 p-4`}>
+                    {checkBox.event && <div className={`${style.chartContainer} chartEventCal  ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"} h-[45vh] mb-4 p-4`}>
                         <Event />
                     </div>}
-                    {!checkBox.recent && <div className={`${style.chartContainer} dashBoardRecentStudent ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"} h-[46vh]`}>
+                    {checkBox.recent && <div className={`${style.chartContainer} dashBoardRecentStudent ${darkMode == "true" ? "bg-[#000] text-[#fff]" : "bg-[#fff] text-[#000]"} h-[46vh]`}>
                         <RecentStudent />
                     </div>}
                 </div>
