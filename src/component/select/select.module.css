@@ -34,3 +34,12 @@
     background-color: var(--hover);
     color: var(--perple);
 }
+@media (max-width:1200px) {
+
+    .selectedTxt{
+        font-size: .73rem;
+    }
+    .options{
+        font-size: .7rem;
+    }
+}

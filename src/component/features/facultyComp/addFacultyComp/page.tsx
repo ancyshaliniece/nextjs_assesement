@@ -240,7 +240,7 @@ export default function AddFacultyComp() {
   
     return (
         <>
-            <div className={`${darkMode==="true"?"bg-[#000]":"bg-[#fff]"} p-8`}>
+            <div className={`${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"} p-8`}>
                 <div className={`title flex justify-between items-center mb-4 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`} >
                     <h1 className="text-[1.9rem]">Add Faculty</h1>
                     <div className="breadCrumbs text-[.85rem]">

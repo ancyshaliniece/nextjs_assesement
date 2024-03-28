@@ -116,28 +116,30 @@ export default function FacultyComp() {
     console.log("filteredCourses", filteredCourses);
 
     return (
-        <div className={`${darkMode==="true"?"bg-[#000]":"bg-[#fff]"} p-8`}>
+        <div className={`${darkMode==="true"?"bg-[#000]":"bg-[#fafafa]"} p-8  facultys `}>
             <div className={`title flex justify-between items-center mb-4 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`} >
                 <h1 className="text-[2rem]">Faculty</h1>
                 <div className="breadCrumbs">
                     <p className="text-[.85rem] text-[#676767]"><Link href="/"><span className="mx-[.2rem]">Home</span></Link> <span>/</span><span className="mx-[.2rem] text-[#c030f0]">Faculty</span></p>
                 </div>
             </div>
-            <div className={`tableContainer  p-4 ${darkMode==="true"?"bg-[#000]":"bg-[#fff]"}`}>
-                <div>
+            <div className={`tableContainer p-4 ${darkMode==="true"?"bg-[#000]":"bg-[#fff]"}`}>
+                <div >
                     <Tabs>
-                        <TabList>
+                        <div className="scrollable-container" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
+                        <TabList style={{ display: 'flex', flexWrap: 'nowrap' }}>
                             {tabHead?.map((item, index) => (
                                 <Tab key={index} onClick={() => handleTabData(item)}>
                                     <span>
-                                        <span className="tabSelect text-[.8rem] text-[#676767] font-[600] ">{item}</span>{" "}
+                                        <span className="tabSelect text-[.8rem] text-[#676767] font-[600] ">{item}</span>
                                         <span className="bg-[#afabab] pr-[6px] pl-[4px] py-[4px] rounded-[50%] text-[.7rem] text-[#fff] number">
                                             {tableDataCount[index]}
-                                        </span>{" "}
+                                        </span>
                                     </span>
                                 </Tab>
                             ))}
                         </TabList>
+                        </div>
                         <div>
                             <div className={` flex justify-between w-[100%] mt-4`}>
                                 <div className="search relative">

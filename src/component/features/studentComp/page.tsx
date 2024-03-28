@@ -41,7 +41,7 @@ export default function StudentList() {
         setFilteredCourses(courses);
     }, [courses])
     return (
-        <div className={`${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"} p-8`}>
+        <div className={`studentCopm ${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"} p-8`}>
             <div className={`title flex justify-between items-center mb-4 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`} >
                 <h1 className="text-[2rem]">Students</h1>
                 <div className="breadCrumbs">

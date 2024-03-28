@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 export default function SideMenu() {
     const mode=useSelector((store:any)=>store.modeStore);
-    const [isHovered, setIsHovered] = useState('dashBoard');
+    const [isHovered, setIsHovered] = useState<string | null>(null);
     const { isSideMenuOpen } = useSideMenu();
     const router=useRouter();
 
@@ -26,6 +26,7 @@ export default function SideMenu() {
 
     // Function to handle click
     const handleClick = (page: any) => {
+        localStorage.setItem('page',page);
         setIsHovered(page);
         router.push(`/${page}`);
         
@@ -37,11 +38,10 @@ export default function SideMenu() {
         setdarkMode(mode);
     }, [mode])
  
-    // useEffect(() => {
-    //     // debugger
-    //     const modes=mode[0].mode;
-    //     setdarkMode(modes);
-    // }, [mode])
+    useEffect(() => {
+        const page=localStorage.getItem('page');
+        setIsHovered(page);
+    }, [isHovered])
 
 
     return (

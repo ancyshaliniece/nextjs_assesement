@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import moment from 'moment';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './calendarEvent.css'
+import '../calendarStudent.css'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 const courseInfo = [
@@ -208,7 +208,7 @@ export default function AddStudentComp() {
       }
 
     return (
-        <div className={`${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"} p-8`}>
+        <div className={`student ${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"} p-8`}>
             <div className={`title flex justify-between items-center mb-4 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`} >
                 <h1 className="text-[1.9rem]">Add Student</h1>
                 <div className="breadCrumbs text-[.85rem]">

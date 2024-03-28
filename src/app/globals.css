@@ -108,7 +108,7 @@ button {
 }
 
 .child {
-  width: 100%;
+  width: calc(100% - 75px);
   margin-left: 4.5rem;
 }
 
@@ -544,4 +544,139 @@ input:checked + .toggleSlider:before {
 }
 .bFilter{
   filter: brightness(10);
+}
+
+/* .facultys .scrollable-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap; 
+}
+
+.facultys .scrollable-container::-webkit-scrollbar {
+  width: 2px; 
+  height: 2px; 
+}
+
+.facultys .scrollable-container::-webkit-scrollbar-track {
+}
+
+.facultys .scrollable-container::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 4px; 
+} */
+
+.facultys .scrollable-container::-webkit-scrollbar {
+  width: 2px; 
+  height: 2px; 
+}
+@media (max-width:1600px) {
+  th{
+    font-size: .9rem !important;
+  }
+  td{
+    font-size: .85rem !important;
+  }
+}
+
+@media (max-width:1400px) {
+ th{
+    font-size: .9rem !important;
+  }
+  .chartEventCal{
+    height: 53vh;
+  }
+  .dashBoardRecentStudent{
+    height: 51vh;
+  }
+  .events{
+    width: 24%;
+  }
+  .charts{
+    width: 74%;
+  }
+ 
+}
+@media (max-width:1200px) {
+  th{
+    font-size: .75rem !important;
+  }
+  td{
+    font-size: .7rem !important;
+  }
+  .coursesCard{
+    width: 47% !important;
+  }
+  .eventAdd .field{
+    width: 30% !important;
+  }
+  .editableRow{
+    font-size: .8rem !important;
+    width: 100px !important;
+  }
+  .thumbnail{
+     margin-left: 0rem !important;
+  }
+  .addInformation{
+    width: 100% !important;
+  }
+  .dashBoardConatainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .chartEvent{
+    width: 100% !important;
+    justify-content: unset !important;
+  }
+  .charts{
+    width: 100% !important;
+  }
+  .events{
+    width: 100% !important;
+    display: flex;
+    gap: 2rem;
+  }
+  .chartEventCal{
+    width: 30% !important;
+    height: 55vh;
+  }
+  .dashBoardRecentStudent{
+    width: 70% !important;
+    height: 55vh;
+  }
+  .addEditCourse{
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+  }
+}
+@media (max-width:996px) {
+  th{
+    font-size: .7rem !important;
+  }
+  td{
+    font-size: .67rem !important;
+  }
+  .eventAdd .field{
+    width: 28% !important;
+  }
+  .eventComp .eventCalendar{
+    width: 100% !important;
+  }
+  .eventComp .eventLists{
+    margin-top: 2rem;
+    width: 100% !important;
+  }
+  .chartEventCal{
+    width: 38% !important;
+  }
+  .dashBoardRecentStudent{
+    width: 60% !important;
+  }
+  .courseChartDash{
+    width: 38% !important;
+  }
+  .revenueChartDash{
+    width: 60% !important;
+  }
+  
 }

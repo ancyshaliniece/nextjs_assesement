@@ -197,7 +197,7 @@ export default function AddCourse() {
                     <div>
                         <h1 className={`text-[1.5rem] mb-6 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`}>Course Details</h1>
                     </div>
-                    <div className="flex ">
+                    <div className="flex addEditCourse">
                         <div className="addInformation w-[60%] border-b border-[#f9f9f9]">
                             <div className="flex gap-12">
                                 <div className="field flex flex-col">
@@ -240,7 +240,7 @@ export default function AddCourse() {
                                 </div>
                             </div>
                         </div>
-                        <div className="thumbnail w-[40%] h-[180px] ml-16 ">
+                        <div className="thumbnail w-[35%] h-[180px] ml-16 ">
                             <span className="lableColor text-[.83rem] ">Thumbnail Image</span>
                             <div className="relative w-[170px] h-[170px] mt-1">
                                 <input type="file" className={`${darkMode==="true"?"text-[#fff] hidden":"text-[#000] hidden"}`} name="file" id="file" onChange={handleFile} />

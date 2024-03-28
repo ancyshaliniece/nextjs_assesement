@@ -4,6 +4,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 19990;
     /* background-color: var(--footerBg); */
     font-size: .8rem;
     display: flex;

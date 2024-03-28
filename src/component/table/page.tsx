@@ -870,7 +870,7 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                       th !== "img" && (
                         <th
                           key={i}
-                          className={`text-center text-[.9rem] font-[600] relative ${headPading?`p-[12px]`:"p-1"}`}
+                          className={`text-center xl:text-[.7rem] text-[.9rem] font-[600] relative ${headPading ? 'p-[12px]' : 'p-1'}`}
                         >
                           <span
                             className={`${
@@ -994,6 +994,9 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                                   value={`${editedData[columnName]}` || ""}
                                   onChange={(e) => handleChange(e, columnName)}
                                   disabled
+                                  className={`${
+                                    editableRow === rowIndex ? "editableRow" : ""
+                                  }`}
                                 />
                               ) : columnName === "Name" ? (
                                 <div className="flex gap-2 items-center">
@@ -1039,6 +1042,9 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                                     onChange={(e) =>
                                       handleChange(e, columnName)
                                     }
+                                    className={`${
+                                      editableRow === rowIndex ? "editableRow" : ""
+                                    }`}
                                   />
                                 </div>
                               ) : (
@@ -1046,6 +1052,9 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                                   type="text"
                                   value={editedData[columnName]}
                                   onChange={(e) => handleChange(e, columnName)}
+                                  className={`${
+                                    editableRow === rowIndex ? "editableRow" : ""
+                                  }`}
                                 />
                               )
                             ) : (

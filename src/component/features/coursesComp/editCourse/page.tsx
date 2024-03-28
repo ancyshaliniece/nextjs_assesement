@@ -218,7 +218,7 @@ export default function EditCourse({ courseId }: CourseInfo) {
                         <div>
                             <h1 className={`text-[1.5rem] mb-6 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`}>Course Details</h1>
                         </div>
-                        <div className="flex ">
+                        <div className="flex addEditCourse">
                             <div className="addInformation w-[60%] border-b border-[#f9f9f9]">
                                 <div className="flex gap-12">
                                     <div className="field flex flex-col">

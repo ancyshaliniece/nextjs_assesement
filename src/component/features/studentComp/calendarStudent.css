@@ -1,4 +1,3 @@
-
 .eventCalendar .rbc-calendar{
     position: absolute;
     height: 250px;
@@ -9,7 +8,7 @@
     background-color: var(--white);
     margin-top: .5rem;
     border: none;
-    right: 35%;
+    right: 50%;
     
 }
 .rbc-calendar::before{
@@ -63,11 +62,11 @@
 .react-datepicker__navigation-icon{
     top: 6px;
 }
-.eventAdd input[type="date"]::-webkit-calendar-picker-indicator{
+.student input[type="date"]::-webkit-calendar-picker-indicator{
     display: none;
 }
-.eventAdd input[type="date"]{
-    background-image: url('../../../../../public/Assets/calendar\ icon.png');
+.student input[type="date"]{
+    background-image: url('../../../../public/Assets/calendar\ icon.png');
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: right ;

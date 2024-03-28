@@ -90,7 +90,7 @@ export default function EventComp() {
     }
 
     return (
-        <div className={`${darkMode==="true"?"bg-[#000] ":"bg-[#f9f9f9]"} p-8`}>
+        <div className={`eventComp ${darkMode==="true"?"bg-[#000] ":"bg-[#f9f9f9]"} p-8`}>
             <div className={`title flex justify-between items-center mb-4 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`} >
                 <h1 className="text-[1.8rem]">Events</h1>
                 <div className="breadCrumbs text-[.85rem] text-[#676767]">
@@ -101,7 +101,7 @@ export default function EventComp() {
                     </p>
                 </div>
             </div>
-            <div className={`tableContainer p-4 w-[100%]  flex justify-between eventTable ${darkMode==="true"?"text-[#fff] bg-[#000]":"text-[#000] bg-[#fff]"}`}>
+            <div className={`tableContainer p-4 w-[100%]  flex flex-wrap justify-between eventTable ${darkMode==="true"?"text-[#fff] bg-[#000]":"text-[#000] bg-[#fff]"}`}>
                 <div className="eventCalendar w-[68%] relative">
                     <select value={viewRef.current} onChange={handleViewChange} className={`absolute right-0 top-0 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`}>
                         <option value="dayGridMonth">Month</option>
@@ -125,8 +125,8 @@ export default function EventComp() {
 
                     />
                 </div>
-                <div className={`w-[28%] ${darkMode==="true"?"bg-[#000] shadow":"bg-[#f5f4f4]"}  rounded-lg`}>
-                    <div className="eventList ">
+                <div className={`eventLists w-[28%]  ${darkMode==="true"?"bg-[#000] shadow":"bg-[#f5f4f4]"}  rounded-lg`}>
+                    <div className="eventList">
                         <div className="eventListTitle flex justify-between items-center border-b px-4 py-3">
                             <p className={`text-[1.2rem] ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`}>Event Lists</p>
                             <Link href={"/event/addEvent"}>

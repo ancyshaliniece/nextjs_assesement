@@ -194,7 +194,7 @@ export default function AddEventComp() {
       }
 
     return (
-        <div className={`mainContainer ${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"}`}>
+        <div className={`eventAdd mainContainer ${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"}`}>
             <h1 className={`font-[500] text-[2rem] mb-3 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`}>Add Course</h1>
         <div className={`containerInfo ${darkMode==="true"?"text-[#fff] bg-[#000] shadow":"text-[#000] bg-[#fff]"}`}>
 
@@ -243,7 +243,7 @@ export default function AddEventComp() {
                             </div>
                             <div className="field flex flex-col w-[12%]">
                                 <label htmlFor="time" className="text-[.8rem] lableColor mb-1">Time</label>
-                                <input type="time" name="time" value={item.time} className={`${darkMode=="true"?"text-[#fff]":"text-[#000]"}`} onChange={(e) => handleInputChange(e, item.id)} />
+                                <input type="time" name="time" value={item.time} className={`${darkMode=="true"?"text-[#fff]":"text-[#000]"} w-[100%]`} onChange={(e) => handleInputChange(e, item.id)} />
                                 <div className="error-message">{error.time}</div>
                             </div>
                             <div className="field flex flex-col w-[12%]">
@@ -252,7 +252,7 @@ export default function AddEventComp() {
                                 <div className="error-message">{error.report}</div>
                             </div>
 
-                            <div className="field flex flex-col w-[100%] mt-[-1.5rem]">
+                            <div className="field1 flex flex-col w-[100%] mt-[-1.5rem]">
                                 <label htmlFor="" className="text-[.8rem] lableColor mb-1">Event Description</label>
                                 <textarea name="info_No" className={`h-[60px] p-2 text-[.85rem] rounded-[5px] ${darkMode=="true"?"text-[#fff]":"text-[#000]"}`} ></textarea>
                             </div>
