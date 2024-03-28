@@ -35,6 +35,7 @@ const catogory = [
         value: "celebration"
     },
 ]
+
 export default function AddEventComp() {
     const eventSlice = useSelector((state: any) => state.eventStore);
     const [showCalendar, setShowCalendar] = useState(false);
@@ -55,6 +56,7 @@ export default function AddEventComp() {
     });
     const mode=useSelector((store:any)=>store.modeStore);
     const [darkMode, setdarkMode] = useState<string | null>(null);
+    const [setCalIndex, setSetCalIndex] = useState<any | null>(null);
 
     // useEffect(() => {
     //     // debugger
@@ -193,6 +195,11 @@ export default function AddEventComp() {
         return date.toLocaleDateString('en-GB'); // Specify 'en-GB' for DD/MM/YYYY format
       }
 
+      const handleCalendar=(index:any)=>{
+        setSetCalIndex(index);
+        setShowCalendar(!showCalendar);
+      }
+
     return (
         <div className={`eventAdd mainContainer ${darkMode==="true"?"bg-[#000]":"bg-[#f9f9f9]"}`}>
             <h1 className={`font-[500] text-[2rem] mb-3 ${darkMode==="true"?"text-[#fff]":"text-[#000]"}`}>Add Course</h1>
@@ -224,8 +231,8 @@ export default function AddEventComp() {
                             </div>
                             <div className="field flex flex-col w-[12%]">
                                 <label htmlFor="start" className="text-[.8rem] lableColor mb-1">Date</label>
-                                <input type="date" name="start" className={`date-input cursor-pointer ${darkMode=="true"?"text-[#fff]":"text-[#000]"}`} value={item.start} onClick={() => setShowCalendar(!showCalendar)} />
-                                {showCalendar &&
+                                <input type="date" name="start" className={`date-input cursor-pointer ${darkMode=="true"?"text-[#fff]":"text-[#000]"}`} value={item.start} onClick={() => handleCalendar(index)} />
+                                {index==setCalIndex && showCalendar &&
                                     <div className="dashBoardCalendar eventCalendar">
                                         <DatePicker
                                             selected={selectedDate}

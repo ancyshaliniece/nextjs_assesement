@@ -74,7 +74,7 @@ export default function DashBoards() {
 
 
     return (
-        <div className={`mainContainer w-[100%] ${darkMode == "true" ? "bg-[#000]" : "bg-[#f9f9f9]"}`}>
+        <div className={`dash mainContainer w-[100%] ${darkMode == "true" ? "bg-[#000]" : "bg-[#f9f9f9]"}`}>
 
             <div className="topHead flex justify-between items-center mb-4">
                 <h1 className={`text-[1.8rem] ${darkMode == "true" ? "text-[#ffffff]" : "text-[#000000]"}`}>Welcome Back !</h1>

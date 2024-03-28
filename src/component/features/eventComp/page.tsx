@@ -51,7 +51,6 @@ export default function EventComp() {
     useEffect(() => {
         console.log("eventStore", eventStore);
         setEvents(eventStore);
-
     }, [])
 
 

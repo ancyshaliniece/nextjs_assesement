@@ -569,6 +569,10 @@ input:checked + .toggleSlider:before {
   width: 2px; 
   height: 2px; 
 }
+.dash .rbc-calendar::before{
+  background-color: transparent !important;
+}
+
 @media (max-width:1600px) {
   th{
     font-size: .9rem !important;

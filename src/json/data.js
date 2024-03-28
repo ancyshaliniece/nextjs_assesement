@@ -3140,7 +3140,7 @@ export const eventsLists = [
     title: 'Good Friday',
     start: '2024-03-29T12:00:00',
     end: '2024-03-29T15:00:00',
-    eventType: 'upComing',
+    eventType: 'currentWeek',
     programName: 'Data Science Seminar'
   },
   {

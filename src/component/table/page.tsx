@@ -1101,7 +1101,7 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                                   alt="editIcon"
                                   width={15}
                                 />
-                                <span>Edit</span>
+                                <span className="text-[#000]">Edit</span>
                               </div>
                               </Link>
                               :
@@ -1114,7 +1114,7 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                                   alt="editIcon"
                                   width={15}
                                 />
-                                <span>Edit</span>
+                                <span className="text-[#000]">Edit</span>
                               </div>}
                              
                             
@@ -1127,7 +1127,7 @@ const TableWithEdit = ({ data, check, moreIcon, courseId,imgFolder,headPading,st
                                   alt="deleteIcon"
                                   width={15}
                                 />
-                                <span>Delete</span>
+                                <span className="text-[#000]">Delete</span>
                               </div>
                             </div>
                           )}
